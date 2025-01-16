@@ -104,3 +104,10 @@ jobs:
         GOOGLE_SHEET_KEY_JSON: ${{ secrets.GOOGLE_SHEET_KEY_JSON }}
         API_URL_TD: ${{ secrets.API_URL_TD }}
         SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+
+     - name: Run ECATDST Node.js script
+      run: node ECAATDST.js
+      env:
+        GOOGLE_SHEET_KEY_JSON: ${{ secrets.GOOGLE_SHEET_KEY_JSON }}
+        API_URL_TD: ${{ secrets.API_URL_ECATDST }}
+        SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
